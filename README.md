@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Medical Records Front End
+
+the intention of this project is to provide a front end to current Medical Records BackEnd
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
