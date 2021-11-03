@@ -1,14 +1,24 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NavBar from './NavBar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Medical Records
-        </p>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar/>
+        <div id="page-body">
+          <Switch>
+            <Route path
+          </Switch>
+          <header className="App-header">
+            <p>
+              Medical Records
+            </p>
+          </header>
+        </div>
+      </div>
+    </Router>
   );
 }
 
