@@ -1,6 +1,10 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './NavBar';
+import Home from './pages/Home';
+import Patients from './pages/Patients';
+import Others from './pages/Others';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -9,13 +13,11 @@ function App() {
         <NavBar/>
         <div id="page-body">
           <Switch>
-            <Route path
+            <Route path="/" component={Home} exact />
+            <Route path="/patients" component={Patients} />
+            <Route path="/others" component={Others} />
+            <Route component={NotFoundPage} />
           </Switch>
-          <header className="App-header">
-            <p>
-              Medical Records
-            </p>
-          </header>
         </div>
       </div>
     </Router>
