@@ -21,7 +21,7 @@ const PatientsList = ({patients}) => {
   return(
     <>
       {patientsData.map((patient, key) => (
-        <p>{patient.name} {patient.lastname}</p>
+        <p><b>{patient.name}</b> {patient.lastname}</p>
       ))}
     </>
   )
