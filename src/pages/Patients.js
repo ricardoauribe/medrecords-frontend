@@ -1,5 +1,6 @@
 import React from "react";
 import PatientsList from "../components/PatientsList";
+import PatientCard from "../components/PatientCard";
 
 const Patients = () => {
   return(
@@ -17,6 +18,7 @@ const Patients = () => {
         Placeholder for component table to show patients. Table should show Name, age, link to medical history
       </p>
       <PatientsList />
+      <PatientCard />
     </>
   )
 }
