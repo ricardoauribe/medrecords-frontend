@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 const PatientCard = ({patient}) => {
   return(
     <>
-      <Card>
+      <Card style={{ width: '18rem'}}>
         <Card.Img variant="top"/>
         <Card.Body>
           <Card.Title>{patient.name} {patient.lastname}</Card.Title>
