@@ -10,12 +10,6 @@ const Patients = () => {
       <p>
         Information about current members/patients
       </p>
-      <p>
-        Placeholder for component to search patients
-      </p>
-      <p>
-        Placeholder for component table to show patients. Table should show Name, age, link to medical history
-      </p>
       <PatientsList />
     </>
   )

@@ -1,10 +1,18 @@
 import React from "react";
+import { Card } from "react-bootstrap";
 
 const PatientCard = ({patient}) => {
   return(
     <>
-      <p><b>{patient.name}</b></p>
-      {patient.age}
+      <Card>
+        <Card.Img variant="top"/>
+        <Card.Body>
+          <Card.Title>{patient.name} {patient.lastname}</Card.Title>
+          <Card.Text>
+            {patient.age}
+          </Card.Text>
+        </Card.Body>
+      </Card>
     </>
   )
 }
