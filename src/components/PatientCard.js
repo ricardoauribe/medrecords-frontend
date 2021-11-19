@@ -1,10 +1,10 @@
 import React from "react";
 
-const PatientCard = () => {
+const PatientCard = ({patient}) => {
   return(
     <>
-      <p><b>Patient Name</b></p>
-      Patients Age
+      <p><b>{patient.name}</b></p>
+      {patient.age}
     </>
   )
 }

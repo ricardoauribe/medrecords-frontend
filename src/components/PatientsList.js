@@ -1,27 +1,31 @@
-import React, {useState} from "react";
-
-
-
-
+import React, {useEffect, useState} from "react";
+import PatientCard from "./PatientCard";
 
 const PatientsList = ({patients}) => {
 
   const [patientsData, setPatientsData] = useState([]);
   const error = null;
 
-  const fetchPatients = async () => {
-    const result = await fetch(`http://localhost:8000/api/members`)
-      .catch(error);
-    const body = await result.json();
-    setPatientsData(body);
-  }
+  useEffect(()=>{
+    const fetchPatients = async () => {
+      const result = await fetch(`http://localhost:8000/api/members`)
+        .catch(error);
+      const body = await result.json();
+      setPatientsData(body);
+    }
 
-  fetchPatients();
+    fetchPatients();
+
+  },[])
+  
+
+  
 
   return(
     <>
       {patientsData.map((patient, key) => (
-        <p><b>{patient.name}</b> {patient.lastname}</p>
+        <PatientCard patient={patient}/>
+        
       ))}
     </>
   )
