@@ -25,7 +25,7 @@ const PatientsList = ({patients}) => {
       <Container style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <Row>
           {patientsData.map((patient, key) => (
-            <Col style={{ justifyContent: 'flex-end'}}>
+            <Col key={key} style={{ justifyContent: 'flex-end'}}>
               <PatientCard key={key} patient={patient}/>
             </Col>
           ))}
