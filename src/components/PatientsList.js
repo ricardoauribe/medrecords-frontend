@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import PatientCard from "./PatientCard";
+import { Container, Row, Col } from "react-bootstrap";
 
 const PatientsList = ({patients}) => {
 
@@ -21,10 +22,15 @@ const PatientsList = ({patients}) => {
   
   return(
     <>
-      {patientsData.map((patient, key) => (
-        <PatientCard key={key} patient={patient}/>
-        
-      ))}
+      <Container>
+        <Row>
+          {patientsData.map((patient, key) => (
+            <Col>
+              <PatientCard key={key} patient={patient}/>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </>
   )
 };
