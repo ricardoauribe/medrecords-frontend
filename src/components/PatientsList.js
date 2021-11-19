@@ -6,6 +6,7 @@ const PatientsList = ({patients}) => {
   const [patientsData, setPatientsData] = useState([]);
   const error = null;
 
+  //Using fetch data to 
   useEffect(()=>{
     const fetchPatients = async () => {
       const result = await fetch(`http://localhost:8000/api/members`)
@@ -18,13 +19,10 @@ const PatientsList = ({patients}) => {
 
   },[])
   
-
-  
-
   return(
     <>
       {patientsData.map((patient, key) => (
-        <PatientCard patient={patient}/>
+        <PatientCard key={key} patient={patient}/>
         
       ))}
     </>
