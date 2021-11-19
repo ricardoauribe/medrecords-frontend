@@ -1,12 +1,12 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 const PatientCard = ({patient}) => {
   return(
     <>
       <Card style={{ width: '18rem'}}>
         {
-          (patient.sex == "male") 
+          (patient.sex === "male") 
             ?<Card.Img variant="top" src={"./avatar-man.png"} />
             :<Card.Img variant="top" src={"./avatar-woman.png"} />
         }
@@ -18,6 +18,7 @@ const PatientCard = ({patient}) => {
             <br/>
             {patient.sex}
           </Card.Text>
+          <Button variant="primary">Medical History</Button>
         </Card.Body>
       </Card>
     </>
