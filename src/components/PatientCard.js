@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 
 const PatientCard = ({patient}) => {
+
   return(
     <>
       <Card style={{ width: '18rem'}}>
@@ -18,11 +19,19 @@ const PatientCard = ({patient}) => {
             <br/>
             {patient.sex}
           </Card.Text>
-          <Button variant="primary">Medical History</Button>
+          <Button variant="primary" href='./patients/history'>Medical History</Button>
         </Card.Body>
       </Card>
     </>
   )
+}
+
+
+const patientHistory = ()=>{
+
+  //let name =  patient.name
+
+  console.log('Hey ');
 }
 
 export default PatientCard;
