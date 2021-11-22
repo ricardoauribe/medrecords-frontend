@@ -19,7 +19,7 @@ const PatientCard = ({patient}) => {
             <br/>
             {patient.sex}
           </Card.Text>
-          <Button variant="primary" href='./patients/history/:{patient.id}'>Medical History</Button>
+          <Button variant="primary" href={`/patients/history/:${patient.name}`}>Medical History</Button>
         </Card.Body>
       </Card>
     </>
