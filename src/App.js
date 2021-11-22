@@ -15,9 +15,9 @@ function App() {
         <div id="page-body">
           <Switch>
             <Route path="/" component={Home} exact />
-            <Route path="/patients" component={Patients} />
+            <Route path="/patients" component={Patients} exact/>
+            <Route path="/patients/history/:name" component={History} />
             <Route path="/others" component={Others} />
-            <Route path="/patients/history" component={History} />
             <Route component={NotFoundPage} />
           </Switch>
         </div>
