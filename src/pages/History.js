@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 const History = ({match}) => {
 
   const patientId = match.params.id;
-  console.log(patientId);
   const error = null;
   const [patientData, setPatientData] = useState({"_id":"","guid":"","name":"","lastname":"","age":0,"sex":""}); 
 
@@ -12,7 +11,6 @@ const History = ({match}) => {
       const result = await fetch(`http://localhost:8000/api/member/${patientId}`)
         .catch(error);
       const body = await result.json();
-      console.log(body);
       setPatientData(body);
     }
 
@@ -22,8 +20,13 @@ const History = ({match}) => {
 
   return(
     <>
-      <h1>History for patient</h1>
-      {patientData.name}
+      <div style={{textAlign: 'left', padding: 20}}>
+        <h1>Medical History for {patientData.name}</h1>
+        <p>Age: {patientData.age}</p>
+
+        <h3>Past Appointments</h3>
+        Place holder for appointments component
+      </div>
     </>
   )
 };
