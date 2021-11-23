@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import HistoryList from "../components/HistoryList";
 
 const History = ({match}) => {
 
@@ -21,11 +22,12 @@ const History = ({match}) => {
   return(
     <>
       <div style={{textAlign: 'left', padding: 20}}>
-        <h1>Medical History for {patientData.name}</h1>
+        <h1>Medical History for {patientData.name} {patientData.lastname}</h1>
         <p>Age: {patientData.age}</p>
+        <p>Age: {patientData.sex}</p>
 
         <h3>Past Appointments</h3>
-        Place holder for appointments component
+        <HistoryList />
       </div>
     </>
   )
