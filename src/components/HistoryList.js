@@ -34,6 +34,7 @@ const HistoryList = ({patientGUID}) => {
             <th>XML</th>
           </tr>
         </thead>
+        <tbody>
           {patientHistory.map((appointment, key) => (
             <tr key={key}>
               <td>{appointment.appointment_id}</td>
@@ -45,6 +46,7 @@ const HistoryList = ({patientGUID}) => {
               <td>{appointment.billXML} </td>
             </tr>
           ))}
+          </tbody>
         </Table>
       </div>
       
