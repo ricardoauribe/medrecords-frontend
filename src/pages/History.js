@@ -27,7 +27,7 @@ const History = ({match}) => {
         <p>Age: {patientData.sex}</p>
 
         <h3>Past Appointments</h3>
-        <HistoryList />
+        <HistoryList patientGUID={patientData.guid}/>
       </div>
     </>
   )
