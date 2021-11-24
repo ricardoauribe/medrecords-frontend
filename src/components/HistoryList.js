@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const HistoryList = ({patientGUID}) => {
 
   const error = null;
-  const [patientHistory, setPatientHistory] = useState({ appointments: [] });
+  const [patientHistory, setPatientHistory] = useState([]);
 
   useEffect(() => {
     const fetchHistory = async () => {
@@ -11,7 +11,6 @@ const HistoryList = ({patientGUID}) => {
         .catch(error);
       const body = await result.json();
       setPatientHistory(body);
-      console.log(patientHistory);
     }
     fetchHistory();
   }, [])
@@ -21,7 +20,9 @@ const HistoryList = ({patientGUID}) => {
     <>
       <div>
         This is the history for 
-        {patientHistory.appointments}
+        {patientHistory.map((appointment, key) => (
+          <p>{appointment.appointment_id}</p>
+        ))}
       </div>
       
     </>
