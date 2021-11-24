@@ -21,7 +21,7 @@ const HistoryList = ({patientGUID}) => {
       <div>
         This is the history for 
         {patientHistory.map((appointment, key) => (
-          <p>{appointment.appointment_id}</p>
+          <p>{appointment.appointment_id} | {appointment.date} | {appointment.type} | {appointment.description}  | {appointment.recepieURL} | {appointment.billPDF} | {appointment.billXML}  </p>
         ))}
       </div>
       
