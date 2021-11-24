@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Table } from "react-bootstrap";
 
 const HistoryList = ({patientGUID}) => {
 
@@ -21,9 +22,30 @@ const HistoryList = ({patientGUID}) => {
     <>
       <div>
         This is the history for 
-        {patientHistory.map((appointment, key) => (
-          <p key={key}>{appointment.appointment_id} | {appointment.date} | {appointment.type} | {appointment.description}  | {appointment.recepieURL} | {appointment.billPDF} | {appointment.billXML}  </p>
-        ))}
+        <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Recepie</th>
+            <th>PDF</th>
+            <th>XML</th>
+          </tr>
+        </thead>
+          {patientHistory.map((appointment, key) => (
+            <tr key={key}>
+              <td>{appointment.appointment_id}</td>
+              <td>{appointment.date} </td>
+              <td>{appointment.type} </td>
+              <td>{appointment.description}</td>
+              <td>{appointment.recepieURL} </td>
+              <td>{appointment.billPDF} </td>
+              <td>{appointment.billXML} </td>
+            </tr>
+          ))}
+        </Table>
       </div>
       
     </>
