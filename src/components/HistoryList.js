@@ -21,7 +21,6 @@ const HistoryList = ({patientGUID}) => {
   return(
     <>
       <div>
-        This is the history for 
         <Table striped bordered hover>
         <thead>
           <tr>

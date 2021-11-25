@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import HistoryList from "../components/HistoryList";
+import { Badge } from "react-bootstrap";
 
 const History = ({match}) => {
 
@@ -22,10 +23,12 @@ const History = ({match}) => {
   return(
     <>
       <div style={{textAlign: 'left', padding: 20}}>
-        <h1>Medical History for {patientData.name} {patientData.lastname}</h1>
-        <p>Age: {patientData.age}</p>
-        <p>Age: {patientData.sex}</p>
-
+        <h1>Medical History</h1>
+        <h3>{patientData.name} {patientData.lastname}</h3>
+        <Badge pill bg="info" style={{marginRight: 5}}>Age: {patientData.age}</Badge>
+        <Badge pill bg="info" style={{marginRight: 5}}>Gender: {patientData.sex}</Badge>
+        <br/>
+        <br/>
         <h3>Past Appointments</h3>
         <HistoryList patientGUID={patientData.guid}/>
       </div>
