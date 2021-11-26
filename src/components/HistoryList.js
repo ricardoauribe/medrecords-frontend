@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
-import { FaFilePdf, FaFileCode } from "react-icons/fa";
+import { FaFilePdf, FaFileCode, FaFilePrescription } from "react-icons/fa";
 
 const HistoryList = ({patientGUID}) => {
 
@@ -41,9 +41,9 @@ const HistoryList = ({patientGUID}) => {
               <td>{appointment.date} </td>
               <td>{appointment.type} </td>
               <td>{appointment.description}</td>
-              <td>{appointment.recepieURL} </td>
-              <td><a href={appointment.billPDF} target="blank"> <FaFilePdf /> </a></td>
-              <td><a href={appointment.billXML} target="blank"> <FaFileCode /> </a></td>
+              <td style={{textAlign: "center"}}><a href={appointment.recepieURL} target="blank"> <FaFilePrescription /> </a></td>
+              <td style={{textAlign: "center"}}><a href={appointment.billPDF} target="blank"> <FaFilePdf /> </a></td>
+              <td style={{textAlign: "center"}}><a href={appointment.billXML} target="blank"> <FaFileCode /> </a></td>
             </tr>
           ))}
           </tbody>
