@@ -42,8 +42,8 @@ const HistoryList = ({patientGUID}) => {
               <td>{appointment.type} </td>
               <td>{appointment.description}</td>
               <td>{appointment.recepieURL} </td>
-              <td>{appointment.billPDF} <FaFilePdf /> </td>
-              <td>{appointment.billXML} <FaFileCode /></td>
+              <td><a href={appointment.billPDF} target="blank"> <FaFilePdf /> </a></td>
+              <td><a href={appointment.billXML} target="blank"> <FaFileCode /> </a></td>
             </tr>
           ))}
           </tbody>
