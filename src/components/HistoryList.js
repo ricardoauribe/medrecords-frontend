@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
+import { FaFilePdf, FaFileCode } from "react-icons/fa";
 
 const HistoryList = ({patientGUID}) => {
 
@@ -41,8 +42,8 @@ const HistoryList = ({patientGUID}) => {
               <td>{appointment.type} </td>
               <td>{appointment.description}</td>
               <td>{appointment.recepieURL} </td>
-              <td>{appointment.billPDF} </td>
-              <td>{appointment.billXML} </td>
+              <td>{appointment.billPDF} <FaFilePdf /> </td>
+              <td>{appointment.billXML} <FaFileCode /></td>
             </tr>
           ))}
           </tbody>
