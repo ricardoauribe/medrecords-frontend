@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 import Home from './pages/Home';
 import Patients from './pages/Patients';
 import History from './pages/History';
+import Admin from './pages/Admin';
 import Others from './pages/Others';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" component={Home} exact />
             <Route path="/patients" component={Patients} exact/>
             <Route path="/patients/history/:id" component={History} />
+            <Route path="/admin" component={Admin} />
             <Route path="/others" component={Others} />
             <Route component={NotFoundPage} />
           </Switch>
