@@ -2,6 +2,10 @@
 
 the intention of this project is to provide a front end to current Medical Records BackEnd
 
+The project will contain 2 major areas one for display an another one to create new records into de Database.
+
+This project will connect to a non relational data base in MongoDB
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
