@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
+import { Table, Badge } from "react-bootstrap";
 import { FaFilePdf, FaFileCode, FaFilePrescription } from "react-icons/fa";
 
 const HistoryList = ({patientGUID}) => {
@@ -39,7 +39,7 @@ const HistoryList = ({patientGUID}) => {
             <tr key={key}>
               <td>{appointment.appointment_id}</td>
               <td>{appointment.date} </td>
-              <td>{appointment.type} </td>
+              <td><Badge pill bg="info">{appointment.type} </Badge></td>
               <td>{appointment.description}</td>
               <td style={{textAlign: "center"}}><a href={appointment.recepieURL} target="blank"> <FaFilePrescription /> </a></td>
               <td style={{textAlign: "center"}}><a href={appointment.billPDF} target="blank"> <FaFilePdf /> </a></td>
@@ -49,7 +49,7 @@ const HistoryList = ({patientGUID}) => {
           </tbody>
         </Table>
       </div>
-      
+      <p>TODO: Add different color tags according to the type of appointment</p>
     </>
   )
 };
