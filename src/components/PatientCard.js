@@ -25,5 +25,5 @@ const PatientCard = ({patient}) => {
     </>
   )
 }
-
+//TODO: Add kids banner
 export default PatientCard;
